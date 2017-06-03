@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="us-en">
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- add favicon -->
+  <link rel="icon" href="assets/images/brainIcon.png">
+
+  <title> Trivia Game </title>
+
+</head>
+
+<body>
+  
+  <div class="container">
+
+      <div class="jumbotron text-center" id="startScreen">
+        <h1>Attack of the Wild Trivia Game!</h1>
+        <p>Do you have what it takes to ward off a predators attack?</p>
+        <p><a class="btn btn-primary btn-lg btn-block startButton" id="startButton" href="#" role="button">Press to begin</a></p>
+      </div>
+
+      <div class="row" >
+        <!-- this collumn is for padding -->
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8" id="gameContainer">
+
+        <div class="row text-center">
+          <h2 id="timer"> 60 </h2> Seconds Left</span>
+        </div>
+
+        <div class="row questionRow" id="question1">
+          <h3>Question 1:</h3>
+            <h4>You are Hiking in the mountains when a Grizzly Bear attacks, luckily you are a seasoned adventurer and know just what to do!  You know the best way to handle a rouge bear is to...</h4>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> back away slowely, and calmly
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> yell racial slurs
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> try reasoning with him or her
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> welcome death with open arms
+              </label>
+          </div>
+
+          <div class="row questionRow" id="question2">
+          <h3>Question 2:</h3>
+            <h4>While out exploring the great outdoors, you come across a mohntain lion, while facing down the mountain cat you have several options of what you can do next,  A smart perwson know to...</h4>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> make yourself look big
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> turn your back to it
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> offer it a sacrirfice
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> play dead
+              </label>
+          </div>
+
+          <div class="row questionRow" id="question3">
+          <h3>Question 3:</h3>
+            <h4>During your travels you happen across a honey badger, you have entered into this badgers territory and he is furious, you known the best plan of action is to...</h4>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> climb a tree
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> give it a hug
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> double tap it with a .44 magnum
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> run like hell
+              </label>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="jumbotron text-center" id="endScreen">
+        <h1>Great Job! </h1>
+        <span><p>Answers Correct =</p></span><span><p id="correctGuesses"></p></span>
+        <span><p>Answers Incorrect =</p></span><span><p id="incorrectGuesses"></p></span>
+        <p><a class="btn btn-primary btn-lg btn-block startButton" id="startButton" href="#" role="button">Press to retry</a></p>
+      </div>
+
+  </div>
+
+
+  <!-- footer -->
+  <div class="row text-center" id="footer">
+    <div class="col-md-12"> 
+      <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+      Copywrite 2017. Evan Tucker </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>

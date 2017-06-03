@@ -1,0 +1,37 @@
+
+.container {
+	margin-top: 50px;
+}
+
+body {
+	background-image: url("../images/forestBackground.jpg");
+	background-size: 100% auto;
+	color: white;
+}
+
+.jumbotron {
+	background-image: url("../images/woodBackground.jpg");
+	width: 80%;
+	margin: 0 auto;
+	border: 3px solid black;
+}
+
+#gameContainer {
+	background-image: url("../images/woodBackground.jpg");
+	margin: 0 auto;
+}
+
+.questionRow {
+	padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+#footer {
+	margin-top: 250px;
+	margin-bottom: 15px;
+}
