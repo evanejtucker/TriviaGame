@@ -28,38 +28,86 @@ function triviaQuestion(question, correctAnswer, wrongAnswer1, wrongAnswer2, wro
 }
 
 	var question1 = triviaQuestion(
-		"You are Hiking in the mountains when a Grizzly Bear attacks, luckily you are a seasoned adventurer and know just what to do!  You know the best way to handle a rouge bear is to...",
-		"back away slowely, and calmly",
-		"yell racial slurs",
-		"try reasoning with him or her",
-		"welcome death with open arms"
+		"Which one of these was NOT one of the thirteen original colonies?",
+		"Maine",
+		"Deleware",
+		"New Hampshire",
+		"Georgia"
 		);
 
 	var question2 = triviaQuestion(
-		"This space will consist of a trivia question",
-		"correct answer",
-		"wrong answer",
-		"wrong answer",
-		"wrong answer",
+		"Who is the Cheif Justice of the United States now?",
+		"John Roberts",
+		"Rex Tillerson",
+		"James Mattis",
+		"Jeff Sessions",
 		);
 
 	var question3 = triviaQuestion(
-		"This space will consist of a trivia question",
-		"correct answer",
-		"wrong answer",
-		"wrong answer",
-		"wrong answer",
+		"When was the constitution written?",
+		"1787",
+		"1776",
+		"1783",
+		"1795",
 		);
 
 	var question4 = triviaQuestion(
-		"This space will consist of a trivia question",
-		"correct answer",
-		"wrong answer",
-		"wrong answer",
-		"wrong answer",
+		"What territory did the Unites States buy from France in 1803?",
+		"Louisiana",
+		"Northwest",
+		"California",
+		"Mississippi",
+		);
+
+	var question5 = triviaQuestion(
+		"Before he was president, Eissenhower was a general.  What war did he fight in?",
+		"World War II",
+		"Korean War",
+		"World War I",
+		"Vietnam War ",
 		); 
 
-var questionArray = [question1, question2, question3, question4];
+	var question6 = triviaQuestion(
+		"How many amendements does the constitution have?",
+		"Twenty Seven (27)",
+		"Ten (10)",
+		"Thirteen (13)",
+		"Twenty Three (23)",
+		); 
+
+	var question7 = triviaQuestion(
+		"How many Justices are on the Supreme Court?",
+		"Nine (9)",
+		"Thirteen (13)",
+		"Three (3)",
+		"Seven (7)",
+		); 
+
+	var question8 = triviaQuestion(
+		"Who wrote the Decleration of Independence?",
+		"Thomas Jefferson",
+		"Alexander Hamilton",
+		"John Hancock",
+		"John Adams",
+		);
+
+	var question9 = triviaQuestion(
+		"If both the President, and the Vice President can no longer serve, who becomes President?",
+		"The Speaker of the House",
+		"Secretary of State",
+		"Secretary of Defense",
+		"Attorney General",
+		); 
+
+	var question10 = triviaQuestion(
+		"The House of Representatives has how many voting members?",
+		"Four Hundred Thirty-Five (435)",
+		"One Hundred (100)",
+		"Four Hundred Fifteen (415)",
+		"Two HUndred Thirty Seven (237)",
+		);  
+
+var questionArray = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10 ];
 
 var gameStart = function() {
 	$(".jumbotron").hide();
