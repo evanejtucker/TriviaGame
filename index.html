@@ -17,6 +17,12 @@
 
   <!-- add favicon -->
   <link rel="icon" href="assets/images/brainIcon.png">
+  
+  <!-- links google font -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  
+  <!-- Links font awesome -->
+  <script src="https://use.fontawesome.com/d577f206bb.js"></script>
 
   <title> Trivia Game </title>
 
@@ -27,9 +33,9 @@
   <div class="container">
 
       <div class="jumbotron text-center" id="startScreen">
-        <h1>Attack of the Wild Trivia Game!</h1>
-        <p>Do you have what it takes to ward off a predators attack?</p>
-        <p><a class="btn btn-primary btn-lg btn-block startButton" id="startButton" href="#" role="button">Press to begin</a></p>
+        <h1>United States Trivia</h1>
+        <p id="infoTxt">Would you pass the United States citizenship exam?  Get 6 or more right and you win!</p>
+        <p><button type="button" class="btn btn-primary btn-lg btn-block startButton" id="option1"> Press to Begin <i class="fa fa-play" aria-hidden="true"></i> </button></p>
       </div>
 
       <div class="row" >
@@ -39,11 +45,11 @@
         <div class="col-md-10" id="gameContainer">
 
           <div class="row text-center">
-              <h2 id="timer"> 60 </h2> Seconds Left
+              <h2 id="timer"> 60 </h2> <span> seconds left </span>
           </div>
 
           <div class="row questionRow" id="question">
-            <h3 id="questionNumber">Question 1:</h3>
+            <h3 id="questionNumber">Question:</h3>
             <h4 id="questionSpace"> example triva question..................................................................................</h4>
                 <button type="button" class="btn btn-primary btn-lg btn-block answerButton" id="option1"> example answer 1 </button>
 

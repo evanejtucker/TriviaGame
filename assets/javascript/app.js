@@ -109,6 +109,8 @@ function triviaQuestion(question, correctAnswer, wrongAnswer1, wrongAnswer2, wro
 
 var questionArray = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10 ];
 
+
+
 var gameStart = function() {
 	$(".jumbotron").hide();
 	$("#gameContainer").show();
@@ -116,14 +118,13 @@ var gameStart = function() {
 	
 }
 
-
 var gameOver = function() {
 	alert("game over");
 	$("#endScreen").show();
 	$("#gameContainer").hide();
-	timeRemaining = 60;
+	// timeRemaining = 60;
+	timer.clearInterval();
 }
-
 
 var timer = function() {
 		timeRemaining--;
@@ -141,7 +142,7 @@ var setQuestion = function() {
 }
 
 var newQuestion = function() {
-	$("#questionSpace").text(questionArray[0].question);
+	$("#questionSpace").text(questionArray[1].question);
 	$("#option1").text(question2.correctAnswer);
 	$("#option2").text(question2.wrongAnswer1);
 	$("#option3").text(question2.wrongAnswer2);
