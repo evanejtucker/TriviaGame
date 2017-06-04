@@ -115,7 +115,8 @@ var gameStart = function() {
 	$(".jumbotron").hide();
 	$("#gameContainer").show();
 	setInterval(timer, 1*1000);
-	
+	setTimeout(gameOver, 60*1000);
+	timeRemaining = 60;
 }
 
 var gameOver = function() {
@@ -128,25 +129,25 @@ var gameOver = function() {
 
 var timer = function() {
 		timeRemaining--;
-		console.log(timeRemaining);
+		// console.log(timeRemaining);
 		$("#timer").text(timeRemaining);
 
 }
 
 var setQuestion = function() {
 	$("#questionSpace").text(question1.question);
-	$("#option1").text(question1.correctAnswer);
-	$("#option2").text(question1.wrongAnswer1);
-	$("#option3").text(question1.wrongAnswer2);
-	$("#option4").text(question1.wrongAnswer3);
+	$("#answer1").text(question1.correctAnswer);
+	$("#answer2").text(question1.wrongAnswer1);
+	$("#answer3").text(question1.wrongAnswer2);
+	$("#answer4").text(question1.wrongAnswer3);
 }
 
 var newQuestion = function() {
 	$("#questionSpace").text(questionArray[1].question);
-	$("#option1").text(question2.correctAnswer);
-	$("#option2").text(question2.wrongAnswer1);
-	$("#option3").text(question2.wrongAnswer2);
-	$("#option4").text(question2.wrongAnswer3);
+	$("#answer1").text(question2.correctAnswer);
+	$("#answer2").text(question2.wrongAnswer1);
+	$("#answer3").text(question2.wrongAnswer2);
+	$("#answer4").text(question2.wrongAnswer3);
 }
 
 
@@ -164,7 +165,11 @@ $("#endScreen").hide();
 
 $(".startButton").on("click", function() {
 	gameStart();
-	setTimeout(gameOver, 60*1000);
+	setQuestion();
+});
+
+$(".retryButton").on("click", function() {
+	gameStart();
 	setQuestion();
 });
 
