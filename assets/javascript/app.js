@@ -8,6 +8,9 @@ var timeRemaining = 60;
 
 var selectedAnswer;
 
+var numCorrect = 0;
+var numIncorrect = 0;
+
 
 
 
@@ -118,12 +121,14 @@ var questionArray = [ question1, question2, question3,
 
 // function to check if user answer is correct
 var userAnswer = function(selectedAnswer) {
-	if (selectedAnswer === answerOption1) {
+	if (selectedAnswer === "answer1") {
 		alert("correct answer");
+		numCorrect++;
 	}
 
 	else {
 		alert("wrong answer");
+		numIncorrect++;
 	}
 }
 
@@ -143,8 +148,10 @@ var gameOver = function() {
 	alert("game over");
 	$("#endScreen").show();
 	$("#gameContainer").hide();
-	// timeRemaining = 60;
+	timeRemaining = 60;
 	clearInterval(timer);
+	$("#correctGuesses").text(numCorrect);
+	$("#incorrectGuesses").text(numIncorrect);
 }
 
 // function to display time on screen
