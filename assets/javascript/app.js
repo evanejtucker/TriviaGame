@@ -86,7 +86,7 @@ function triviaQuestion(question, answers) {
 
 	var question10 = triviaQuestion(
 		"The House of Representatives has how many voting members?",
-		["Four Hundred Thirty-Five (435)","One Hundred (100)","Four Hundred Fifteen (415)","Two HUndred Thirty Seven (237)"]
+		["Four Hundred Thirty-Five (435)","One Hundred (100)","Four Hundred Fifteen (415)","Two Hundred Thirty Seven (237)"]
 		);
 
 // array of all the trivia questions
@@ -100,7 +100,7 @@ var userAnswer = function(selectedId) {
   var selectedAnswer = $('#'+selectedId).text()
 
 	if (selectedAnswer === questionArray[currentQuestion].correct) {
-
+		$('#'+selectedId).addClass("#answerButton:active");
 		alert("Correct!");
 		numCorrect++;
 	}
@@ -130,6 +130,14 @@ var gameOver = function() {
 	$("#gameContainer").hide();
 	$("#correctGuesses").text(numCorrect);
 	$("#incorrectGuesses").text(questionArray.length - numCorrect);
+	if (numCorrect >= 6) {
+		$("#gameResponse").text("Great Job!");
+	}
+	else {
+		$("#gameResponse").text("Not Good Enough");
+	}
+
+	var currentQuestion = 0
 }
 
 // function to display time on screen
@@ -184,7 +192,7 @@ $(".startButton").on("click", function() {
 
 $(".retryButton").on("click", function() {
 	gameStart();
-	setQuestion();
+	setQuestion(questionArray[currentQuestion]);
 });
 
 
