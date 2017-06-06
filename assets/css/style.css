@@ -38,7 +38,7 @@ body {
 	color: red;
 }
 
-#infoTxt {
+#colorTxt {
 	color: red;
 }
 
@@ -50,4 +50,5 @@ body {
 #footer {
 	margin-top: 250px;
 	margin-bottom: 15px;
+	color: #E5E4E2;
 }

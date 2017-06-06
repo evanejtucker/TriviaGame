@@ -6,6 +6,8 @@ $(document).ready(function() {
 
 var timeRemaining = 60;
 
+var selectedAnswer;
+
 
 
 
@@ -15,18 +17,19 @@ var timeRemaining = 60;
 // Functions
 // ----------------------------------------------------------------
 
-
-function triviaQuestion(question, correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
+//function to create question criteria
+function triviaQuestion(question, answerOption1, answerOption2, answerOption3, answerOption4) {
 	var question = {
 		question: question,
-		correctAnswer: correctAnswer,
-		wrongAnswer1: wrongAnswer1,
-		wrongAnswer2: wrongAnswer2,
-		wrongAnswer3: wrongAnswer3,
+		answerOption1: answerOption1,
+		answerOption2: answerOption2,
+		answerOption3: answerOption3,
+		answerOption4: answerOption4,
 	}
 	return question;
 }
-
+	
+	// these variables hold the question data
 	var question1 = triviaQuestion(
 		"Which one of these was NOT one of the thirteen original colonies?",
 		"Maine",
@@ -107,10 +110,25 @@ function triviaQuestion(question, correctAnswer, wrongAnswer1, wrongAnswer2, wro
 		"Two HUndred Thirty Seven (237)",
 		);  
 
-var questionArray = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10 ];
+// array of all the trivia questions
+var questionArray = [ question1, question2, question3, 
+					  question4, question5, question6, 
+					  question7, question8, question9, 
+					  question10 ];
+
+// function to check if user answer is correct
+var userAnswer = function(selectedAnswer) {
+	if (selectedAnswer === answerOption1) {
+		alert("correct answer");
+	}
+
+	else {
+		alert("wrong answer");
+	}
+}
 
 
-
+// function to start game, and start timers
 var gameStart = function() {
 	$(".jumbotron").hide();
 	$("#gameContainer").show();
@@ -119,14 +137,17 @@ var gameStart = function() {
 	timeRemaining = 60;
 }
 
+// function to take you to end screne
+// also need to display final score
 var gameOver = function() {
 	alert("game over");
 	$("#endScreen").show();
 	$("#gameContainer").hide();
 	// timeRemaining = 60;
-	timer.clearInterval();
+	clearInterval(timer);
 }
 
+// function to display time on screen
 var timer = function() {
 		timeRemaining--;
 		// console.log(timeRemaining);
@@ -136,22 +157,19 @@ var timer = function() {
 
 var setQuestion = function() {
 	$("#questionSpace").text(question1.question);
-	$("#answer1").text(question1.correctAnswer);
-	$("#answer2").text(question1.wrongAnswer1);
-	$("#answer3").text(question1.wrongAnswer2);
-	$("#answer4").text(question1.wrongAnswer3);
+	$("#answer1").text(question1.answerOption1);
+	$("#answer2").text(question1.answerOption2);
+	$("#answer3").text(question1.answerOption3);
+	$("#answer4").text(question1.answerOption4);
 }
 
 var newQuestion = function() {
 	$("#questionSpace").text(questionArray[1].question);
-	$("#answer1").text(question2.correctAnswer);
-	$("#answer2").text(question2.wrongAnswer1);
-	$("#answer3").text(question2.wrongAnswer2);
-	$("#answer4").text(question2.wrongAnswer3);
+	$("#answer1").text(question2.answerOption1);
+	$("#answer2").text(question2.answerOption2);
+	$("#answer3").text(question2.answerOption3);
+	$("#answer4").text(question2.answerOption4);
 }
-
-
-
 
 
 
@@ -175,6 +193,12 @@ $(".retryButton").on("click", function() {
 
 $(".answerButton").on("click", function() {
 	newQuestion();
+});
+
+$("#question>.answerButton").click(function(event) {
+    userAnswer(event.currentTarget.id);
+    alert(event.currentTarget.id);
+
 });
 
 
