@@ -4,7 +4,7 @@ $(document).ready(function() {
 // Global Variables
 // ----------------------------------------------------------------
 
-var timeRemaining = 60;
+var timeRemaining = 20;
 var intervalId;
 var timeoutId;
 
@@ -162,11 +162,6 @@ var newQuestion = function() {
   } else {
     gameOver();
   }
-	// $("#questionSpace").text(questionArray[1].question);
-	// $("#answer1").text(question2.answerOption1);
-	// $("#answer2").text(question2.answerOption2);
-	// $("#answer3").text(question2.answerOption3);
-	// $("#answer4").text(question2.answerOption4);
 }
 
 
@@ -192,7 +187,7 @@ $(".retryButton").on("click", function() {
 
 $("#question>.answerButton").click(function(event) {
     alert(questionArray[currentQuestion].correct);
-    console.log(event)
+    // console.log(event)
     userAnswer(event.currentTarget.id);
     newQuestion();
 });
