@@ -15,10 +15,6 @@ var numIncorrect = 0;
 
 
 
-
-
-
-
 // Functions
 // ----------------------------------------------------------------
 function randomOrder (arr) {
@@ -105,8 +101,12 @@ var userAnswer = function(selectedId) {
 
 	if (selectedAnswer === questionArray[currentQuestion].correct) {
 
-		alert("correct answer");
+		alert("Correct!");
 		numCorrect++;
+	}
+
+	else {
+		alert("correct answer: " + questionArray[currentQuestion].correct);
 	}
 }
 
@@ -175,18 +175,21 @@ var currentQuestion = 0
 $("#gameContainer").hide();
 $("#endScreen").hide();
 
+
 $(".startButton").on("click", function() {
 	gameStart();
 	setQuestion(questionArray[currentQuestion]);
 });
+
 
 $(".retryButton").on("click", function() {
 	gameStart();
 	setQuestion();
 });
 
+
 $("#question>.answerButton").click(function(event) {
-    alert(questionArray[currentQuestion].correct);
+    // alert(questionArray[currentQuestion].correct);
     // console.log(event)
     userAnswer(event.currentTarget.id);
     newQuestion();
