@@ -137,7 +137,9 @@ var gameOver = function() {
 		$("#gameResponse").text("Not Good Enough");
 	}
 
-	var currentQuestion = 0
+	currentQuestion = 0;
+	clearInterval(intervalId);
+  	clearTimeout(timeoutId);
 }
 
 // function to display time on screen
